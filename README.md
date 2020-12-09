@@ -1,17 +1,16 @@
-# laget.Db.Dapper
-A generic implementation of Dapper, a high performance Micro-ORM supporting SQL Server, MySQL, Sqlite, SqlCE, Firebird etc...
+# DogStatsd.Extensions.Hosting
+Hosting and startup abstractions for DogStatsd. When using NuGet 3.x this package requires at least version 3.4....
 
 ## Usage
-```c#
-public interface IUserRepository : IRepository<Models.User>
-{
-}
+> To see the full documentation for StatsdConfig please refer to the [documentation](https://github.com/DataDog/dogstatsd-csharp-client/blob/master/src/StatsdClient/StatsdConfig.cs)
 
-public class UserRepository : Repository<Models.User>, IUserRepository
-{
-    public UserRepository(string connectionString)
-        : base(connectionString)
+```c#
+await new HostBuilder()
+    .UseDogStatsd(new StatsdConfig
     {
-    }
-}
+        StatsdServerName = "127.0.0.1",
+        Prefix = "prefix",
+    })
+    .Build()
+    .RunAsync();
 ```
