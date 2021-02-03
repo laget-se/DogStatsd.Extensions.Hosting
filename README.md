@@ -19,8 +19,8 @@ await new HostBuilder()
 await new HostBuilder()
     .UseDogStatsd((context) => new StatsdConfig
     {
-        Prefix = "clubadmin",
-        StatsdServerName = context.HostingEnvironment.IsProduction() ? "127.0.0.1" : "127.0.0.2"
+        StatsdServerName = context.HostingEnvironment.IsProduction() ? "127.0.0.1" : "127.0.0.2",
+        Prefix = "prefix"
     })
     .Build()
     .RunAsync();
