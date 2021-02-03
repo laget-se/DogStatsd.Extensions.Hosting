@@ -1,4 +1,4 @@
-# DogStatsd.Extensions.Hosting
+﻿# DogStatsd.Extensions.Hosting
 Hosting and startup abstractions for DogStatsd. When using NuGet 3.x this package requires at least version 3.4....
 
 ## Usage
@@ -10,6 +10,17 @@ await new HostBuilder()
     {
         StatsdServerName = "127.0.0.1",
         Prefix = "prefix",
+    })
+    .Build()
+    .RunAsync();
+```
+
+```c#
+await new HostBuilder()
+    .UseDogStatsd((context) => new StatsdConfig
+    {
+        Prefix = "clubadmin",
+        StatsdServerName = context.HostingEnvironment.IsProduction() ? "127.0.0.1" : "127.0.0.2"
     })
     .Build()
     .RunAsync();
