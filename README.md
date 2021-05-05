@@ -5,7 +5,7 @@ Hosting and startup abstractions for DogStatsd. When using NuGet 3.x this packag
 > To see the full documentation for StatsdConfig please refer to the [documentation](https://github.com/DataDog/dogstatsd-csharp-client/blob/master/src/StatsdClient/StatsdConfig.cs)
 
 ```c#
-await new HostBuilder()
+await Host.CreateDefaultBuilder()
     .UseDogStatsd(new StatsdConfig
     {
         StatsdServerName = "127.0.0.1",
