@@ -16,7 +16,7 @@ await Host.CreateDefaultBuilder()
 ```
 
 ```c#
-await new HostBuilder()
+await Host.CreateDefaultBuilder()
     .UseDogStatsd((context) => new StatsdConfig
     {
         StatsdServerName = context.HostingEnvironment.IsProduction() ? "127.0.0.1" : "127.0.0.2",
