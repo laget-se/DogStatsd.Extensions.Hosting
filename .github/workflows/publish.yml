@@ -23,7 +23,7 @@ jobs:
       uses: laget-se/publish-nuget@v2.7.2
       with:
         INCLUDE_SYMBOLS: true
-        PROJECT_FILE_PATH: DogStatsd.Extensions.Hosting/DogStatsd.Extensions.Hosting.csproj
         NUGET_KEY: ${{secrets.NUGET_API_KEY}}
         NUSPEC_FILE: DogStatsd.Extensions.Hosting.nuspec
+        PROJECT_FILE_PATH: DogStatsd.Extensions.Hosting/DogStatsd.Extensions.Hosting.csproj
         VERSION_STATIC: "1.2.${{github.run_number}}"
