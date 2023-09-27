@@ -2,12 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>DogStatsd.Extensions.Hosting</id>
-    <title>DogStatsd.Extensions.Hosting</title>
+    <title>DogStatsD.Extensions.Hosting</title>
     <version>$version$</version>
     <authors>laget.se</authors>
     <owners>laget.se</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Hosting and startup abstractions for DogStatsd. When using NuGet 3.x this package requires at least version 3.4....</description>
+    <description>Hosting and startup abstractions for DogStatsD. When using NuGet 3.x this package requires at least version 3.4....</description>
     <summary></summary>
     <license type="expression">Apache-2.0</license>
     <projectUrl>https://github.com/laget-se/DogStatsd.Extensions.Hosting</projectUrl>
