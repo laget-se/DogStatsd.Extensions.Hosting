@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 6.0.x
-    - run: dotnet restore
-    - run: dotnet build --configuration Release DogStatsd.Extensions.Hosting/DogStatsd.Extensions.Hosting.csproj
-    - run: dotnet pack --configuration Release DogStatsd.Extensions.Hosting/DogStatsd.Extensions.Hosting.csproj --no-build -p:Version=${{vars.VERSION}}.${{github.run_number}} -p:PackageVersion=${{vars.VERSION}}.${{github.run_number}} -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -p:NuspecFile=DogStatsd.Extensions.Hosting.nuspec
-    - run: dotnet nuget push DogStatsd.Extensions.Hosting/bin/Release/DogStatsd.Extensions.Hosting.${{vars.VERSION}}.${{github.run_number}}.nupkg --api-key ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json --skip-duplicate
+      - uses: actions/checkout@v3
+      - uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 6.0.x
+      - run: dotnet restore
+      - run: dotnet build --configuration Release DogStatsd.Extensions.Hosting/DogStatsd.Extensions.Hosting.csproj
+      - run: dotnet pack --configuration Release DogStatsd.Extensions.Hosting/DogStatsd.Extensions.Hosting.csproj --no-build -p:Version=${{vars.VERSION}}.${{github.run_number}} -p:PackageVersion=${{vars.VERSION}}.${{github.run_number}} -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -p:NuspecFile=DogStatsd.Extensions.Hosting.nuspec
+      - run: dotnet nuget push DogStatsd.Extensions.Hosting/bin/Release/DogStatsd.Extensions.Hosting.${{vars.VERSION}}.${{github.run_number}}.nupkg --api-key ${{secrets.NUGET_API_KEY}} --source https://api.nuget.org/v3/index.json --skip-duplicate
