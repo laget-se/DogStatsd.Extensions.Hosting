@@ -17,19 +17,19 @@
     <dependencies>
       <group targetFramework="net8.0">
         <dependency id="DogStatsD-CSharp-Client" version="8.0.0" />
-        <dependency id="Microsoft.Extensions.Hosting.Abstractions" version="8.0.0" />
+        <dependency id="Microsoft.Extensions.Hosting.Abstractions" version="8.0.1" />
       </group>
       <group targetFramework="net6.0">
         <dependency id="DogStatsD-CSharp-Client" version="8.0.0" />
-        <dependency id="Microsoft.Extensions.Hosting.Abstractions" version="8.0.0" />
+        <dependency id="Microsoft.Extensions.Hosting.Abstractions" version="8.0.1" />
       </group>
       <group targetFramework="netstandard2.1">
         <dependency id="DogStatsD-CSharp-Client" version="8.0.0" />
-        <dependency id="Microsoft.Extensions.Hosting.Abstractions" version="8.0.0" />
+        <dependency id="Microsoft.Extensions.Hosting.Abstractions" version="8.0.1" />
       </group>
       <group targetFramework="netstandard2.0">
         <dependency id="DogStatsD-CSharp-Client" version="8.0.0" />
-        <dependency id="Microsoft.Extensions.Hosting.Abstractions" version="8.0.0" />
+        <dependency id="Microsoft.Extensions.Hosting.Abstractions" version="8.0.1" />
       </group>
     </dependencies>
   </metadata>
